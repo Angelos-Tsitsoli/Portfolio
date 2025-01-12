@@ -1,0 +1,40 @@
+.header {
+  top: 0;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent; /* Make the header background transparent */
+  border-bottom: 2px solid black; /* Remove the border */
+  border-top: 2px solid black;
+  width: 100vw;
+  left: 0;
+  position: fixed;
+  z-index: 1000;
+  height: 60px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between; /* Space between the links */
+  align-items: center;
+  width: 50%; /* Adjust the width as needed */
+  gap: 30px;
+}
+
+.header .options .option {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Set link color */
+  font-size: 1rem;
+  margin: 0 10px;
+  cursor: pointer; /* Fixes the hover issue */
+}
+
+.option {
+  color: black; /* Make the text color white */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.option:hover {
+  text-decoration: underline; /* Add underline on hover */
+}

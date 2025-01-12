@@ -1,0 +1,461 @@
+  /* Scroll Button */
+  .scroll-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 2;
+    border: 2px solid black; /* Add a black border */
+    border-radius: 5px; 
+  }
+  
+  .scroll-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+
+html,body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+
+}
+
+*, *::before, *::after {
+  box-sizing: inherit; /* Inherit box-sizing from html */
+}
+.page-container {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+
+}  
+
+
+.social-media-card {
+  background-color: white; /* White background */
+  border: 2px solid #ccc; /* Light gray border */
+  padding: 20px; /* Padding inside the card */
+  position: absolute; /* Position the card absolutely */
+  top: 200px; /* Distance from the top of the page */
+  width: 80px; /* Set a fixed width for the card */
+  display: flex;
+  flex-direction: column; /* Arrange icons in a column */
+  align-items: center; /* Center the icons horizontally */
+  left: 0;
+  position: absolute;
+}
+
+.social-media-icons {
+  display: flex;
+  flex-direction: column; /* Arrange icons in a column */
+  align-items: center; /* Center the icons horizontally */
+}
+
+.social-media-icons a {
+  margin: 10px 0; /* Space between the icons */
+}
+
+.social-media-icons img {
+  width: 30px; /* Set the width of the icons */
+  height: 30px; /* Set the height of the icons */
+}
+
+.introduction {
+  position: absolute;
+  background-image: url('/assets/white-background.webp');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+.big-text {
+  font-size: 4rem; /* Adjust the size as needed */
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center; /* Center the text */
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  color: black;
+}
+
+
+.about-me {
+  font-size: 2rem; /* Adjust the size as needed */
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center; /* Center the text */
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  color: black;
+}
+
+.about-me-description {
+  font-size: 1.2rem; /* Adjust the size of the description text */
+  font-weight: normal;
+  text-align: center; /* Center the text */
+  color: black; /* Match the color of the heading */
+  position: absolute;
+  top: 15%; /* Adjust the position relative to the parent */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  margin: 0; /* Remove margin for precise positioning */
+  margin-top: 30px;
+  line-height: 1.2;
+}
+
+.content-container {
+  position: absolute;
+  /* background-image: url('/assets/background.jpg');
+  background-size: cover; */
+  background-color: rgb(227, 230, 235);
+  width: 100%;
+  height: 130vh;
+  top: 100vh;
+  left: 0;
+  display: flex;
+}
+
+.description {
+  margin-top: 170px; /* Move the prog-languages card up */
+}
+
+.description, .prog-languages {
+  flex: 1; /* Take up remaining space */
+  padding: 10px;
+  display: flex;
+  justify-content: center; /* Center the card horizontally */
+  align-items: center; /* Center the card vertically */
+}
+
+.description mat-card {
+  width: 90%; /* Make the description card a bit bigger */
+  max-width: 500px; /* Optional: Set a maximum width */
+  height: 80vh; /* Adjust the height as needed */
+  background-color: transparent; /* Make the background transparent */
+  border: solid black; /* Add a white border */
+  color: black; /* Make the text color white */
+  padding: 20px;
+}
+
+.description mat-card p {
+  font-size: 1.2rem; /* Increase the text size */
+ 
+}
+
+.prog-languages {
+  margin-top: 30px; /* Move the prog-languages card up */
+}
+
+.outer-card p {
+  font-size: 1.3rem; /* Increase the text size */
+  margin-bottom: 30px;
+ 
+}
+
+.prog-languages .outer-card {
+  width: 90%; /* Make the width the same as the description card */
+  max-width: 500px; /* Optional: Set a maximum width */
+  height: 60vh; /* Make the height smaller */
+  background-color: transparent; /* Make the background transparent */
+  border: solid black; /* Add a white border */
+  color: black; /* Make the text color white */
+  padding: 20px; /* Add padding to the card */
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next row if needed */
+  gap: 5px; /* Add spacing between cards */
+  justify-content: flex-start; /* Align items at the start of the row */
+  align-items: flex-start; /* Align items at the top */
+  box-sizing: border-box;
+
+}
+
+.prog-languages .row {
+  display: flex; /* Use flexbox to align cards in a row */
+  gap: 10px; /* Space between cards */
+  margin-bottom: 10px; /* Space between rows */
+  justify-content: space-between; /* Spread out the cards evenly in the row */
+}
+
+.prog-languages .prog-card {
+  background-color: transparent;
+ 
+  color: black;
+  padding: 10px;
+  width: calc(25% - 10px); /* 25% width for each card minus the gap */
+  height: 50px;
+  display: flex; /* Enable Flexbox for centering */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  text-align: center; /* Center text inside */
+  box-sizing: border-box; /* Include padding and border in total size */
+}
+
+.projects{
+  position: absolute;
+  /* background-image: url('/assets/background.jpg');
+  background-size: cover; */
+  background-color: rgb(246, 245, 245);
+  width: 100%;
+  height: 120vh;
+  top: 220vh;
+  left: 0;
+  display: flex;
+  margin-top: 2rem;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap; /* Allow the cards to wrap to a new row if they don't fit */
+  gap: 20px; /* Space between the cards */
+  justify-content: center;
+  align-items: center;
+}
+.project-card {
+  height: 35%;
+  width: 300px; /* Set a fixed width for the cards */
+  background-color: white; /* White background */
+  border: 1px solid #ccc; /* Light gray border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visual effect */
+  display: flex;
+  flex-direction: column; /* Arrange content in a column */
+  align-items: center; /* Center the content horizontally */
+  padding: 20px; /* Add padding inside the card */
+}
+
+.project-image {
+  width: 100%; /* Make the image take up the full width of the card */
+  height: auto; /* Maintain the aspect ratio of the image */
+  margin-bottom: 10px; /* Space between the image and the description */
+}
+
+.project-description {
+  text-align: center; /* Center the text */
+  font-size: 16px; /* Set the font size */
+  color: #333; /* Set the text color */
+}
+
+.some-projects{
+  font-size: 2rem; /* Adjust the size as needed */
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center; /* Center the text */
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  color: black;
+}
+
+.large-heading {
+  font-size: 1.7rem; /* Adjust the size as needed */
+}  
+
+
+.contact {
+  position: absolute;
+  /* background-image: url('/assets/background.jpg');
+  background-size: cover; */
+  background-image: url('/assets/white-background.webp');
+  width: 100%;
+  height: 140vh;
+  top: 340vh;
+  left: 0;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: var(--bottom-margin-2);
+}
+
+.contact-form-container {
+  max-width: 40.75rem;
+  margin: 0 auto;
+  padding: 0.938rem;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+}
+
+.contact-form-container label {
+  line-height: 2.7em;
+  font-weight: var(--bold-font);
+  color: var(--primary-color);
+}
+
+.contact-form-container textarea {
+  min-height: 6.25rem;
+  font-size: 14px;
+}
+
+.contact-form-container .input-field {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  border: 2px outset var(--primary-color);
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.input-field::placeholder {
+  padding: 0.5rem;
+  color: var(--primary-color);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #fff;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: var(--bold-font);
+  transition: var(--transition);
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.contact-form-container {
+    max-width: 23.75rem;
+    margin: 0 auto;
+  }
+
+  .contact-card {
+    background-color: rgb(219, 224, 227); /* Set background color to dark blue */
+    color: black; /* Set text color to white for better contrast */
+    padding: 20px; /* Add padding inside the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visual effect */
+    margin: auto; /* Center the card horizontally */
+    width: 40%;
+    top: -80px;;
+  }
+
+
+  .footer {
+    background-color: black; /* Set background color to black */
+    color: white; /* Set text color to white for better contrast */
+    padding: 20px; /* Add padding inside the footer */
+    text-align: center; /* Center the text */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    top: 480vh;
+  }
+
+
+
+/* @media screen and (max-width: 420px) {
+  .hero img {
+    height: 37.5rem;
+    width: 23rem;
+  }
+
+  .bio {
+    width: 18.3rem;
+  }
+
+  .project-container {
+    width: 17.875rem;
+  }
+
+  .contact-form-container {
+    max-width: 17.75rem;
+  }
+} */
+/* @media screen and (max-width: 720px) {
+  nav {
+    padding: 1.5rem 1rem;
+  }
+  nav ul {
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+  }
+
+  nav ul li {
+    margin: 8px;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  nav ul.show {
+    transform: translateX(0);
+  }
+
+  .hero {
+    margin-top: -4rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero img {
+    height: 37.5rem;
+    width: 30rem;
+  }
+
+  .bio {
+    margin-top: -7rem;
+    width: 20.5rem;
+  }
+
+  .more-about {
+    margin-top: 2rem;
+    padding: 1rem 3.5rem;
+  }
+
+  .more-about h2 {
+    text-align: center;
+  }
+
+  .more-about p {
+    text-align: justify;
+  }
+
+  .icon {
+    width: 5.875rem;
+    height: 5.25rem;
+  }
+
+  .projects-container {
+    flex-direction: column;
+  }
+
+  .project-container {
+    width: 20.875rem;
+  }
+
+  .contact-form-container {
+    max-width: 23.75rem;
+  }
+} */
